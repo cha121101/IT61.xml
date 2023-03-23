@@ -9,12 +9,13 @@ let showDatas =`
 <tr>
     <th>Kind of anime</th>
     <th>Title</th>
-    <th>Description</th>
+    
     <th>Author</th>    
     <th>Season</th>   
     <th>Genre</th>      
 </tr>
     `;
+    //<th>Description</th>
     fetch("anime.xml").then(response =>{
         return response.text();
     }).then(datas =>{
@@ -26,33 +27,27 @@ let showDatas =`
             for(const t of dt.querySelector('title').children){
                 sepTitle += `
                         <li> ${t.textContent}</li>
-                        
                 `
-               
             }
             for(const t of dt.querySelector('genre').children){
                 sepGenre += `
-                        <li> ${t.textContent}</li>
-                        
+                        <li> ${t.textContent}</li>   
                 `
-               
             }
 
             showDatas += `
                 <tr>
                     <td>${dt.tagName} </td>
                     <td> <ul> ${sepTitle} </ul> </td>
-                    <td>${dt.querySelector('description').textContent} </td>
+                    
                     <td>${dt.querySelector('author').textContent}</td>
                     <td>${dt.querySelector('season').textContent}</td>
                     <td> <ul> ${sepGenre} </ul> </td>
                 </tr>
-
             `
+            // <td>${dt.querySelector('description').textContent} </td>
             sepTitle = ""
             sepGenre = ""
-
-
             
             // console.log(dt.querySelector('description').textContent);
             // console.log(dt.querySelector('author').textContent);
