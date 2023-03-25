@@ -49,7 +49,7 @@ fetch('anime.xml').then(res =>{
                          <li> ${getGenre.textContent}</li>
                          `
         }
-        //this variable where stored the html elements
+        //this
         tableData += `
                  <tr>
                         <td> ${dt.tagName}</td>
