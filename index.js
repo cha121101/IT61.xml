@@ -30,7 +30,7 @@ fetch('anime.xml').then(res =>{
 }).then(animeData =>{
     const xmlDocs = new DOMParser().parseFromString(animeData , 'text/xml');
     let datas = xmlDocs.querySelector('anime').children;
-
+    
 
     //create a for each where can show all the datas from the variable data
     for(const dt of datas){
