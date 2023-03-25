@@ -14,9 +14,11 @@ let tableData = `
         
     <tr>
         <th> Type of anime </th>
-        <th>  Title </th>
-        <th>  Author</th>
-        <th>  Genre </th>
+        <th> Title </th>
+        <th> Author </th>
+        <th> Description </th>
+        <th> Season </th>
+        <th> Genre </th>
         
     </tr>
 
@@ -57,6 +59,8 @@ btngetData.addEventListener('click' , () =>{
                                 <td> ${dt.tagName}</td>
                                 <td><ul>  ${listTitle} </ul></td>
                                 <td> ${dt.querySelector('author').textContent}</td>
+                                <td> ${dt.querySelector('description').textContent}</td>
+                                <td> ${dt.querySelector('season').textContent}</td>
                                 <td><ul>  ${listGenre} </ul></td>
                         </tr>
         
