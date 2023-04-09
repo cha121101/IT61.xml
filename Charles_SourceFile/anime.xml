@@ -79,6 +79,7 @@
                 <!--<part_3>Not available yet</part_3>-->
                 </season_4>
             </episode>
+            <imgpath>img/aotposter.jpeg</imgpath>
         </shonen>
 
         <shojo>
@@ -118,6 +119,7 @@
                 <season_1>25</season_1>
                 <season_2>13</season_2>
             </episode>
+            <imgpath> img/from_me_to_youposter.jpg </imgpath>
         </shojo>
 
         <seinen>
@@ -169,6 +171,7 @@
                 <season_3>12</season_3>
                 <season_4>12</season_4>
             </episode>
+            <imgpath>img/Bungo Stray Dogsposter.jpg</imgpath>
         </seinen>
 
         <josei>
@@ -203,6 +206,7 @@
             <episode>
                 <season_1>24</season_1>
             </episode>
+            <imgpath>img/Honey and Cloverposter.jpg</imgpath>
         </josei>
         
         <kodomomuke>
@@ -229,6 +233,7 @@
             <episode>
                 <season_1>1787</season_1>
             </episode>
+            <imgpath>img/doraemonposter.jpg</imgpath>
         </kodomomuke>
 
     </anime>

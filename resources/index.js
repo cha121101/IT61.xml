@@ -1,6 +1,6 @@
 
 //fetch from XAMMP directory. I dunno kung gagana siya sa laragon pero parang required kase ginagamit ni sir ren
-fetch('http://localhost/IT61.xml/main.php').then(res => {
+fetch('http://localhost/Charles_SourceFile/main.php').then(res => {
     //all the data frem the fetch will return as text.
     return res.text()
 
@@ -21,17 +21,37 @@ fetch('http://localhost/IT61.xml/main.php').then(res => {
 
         //
         msg += `
-            <div class="col-2 col-auto mt-5 w-20"> 
-                <div class="card" style="width: 100%; height: 100%">
-                <img class="card-img-top" src="${datas[`${dt}`].imgpath}" alt="Card image cap" style="height : 1000px">
-                <div class="card-body">
-                <h5 class="card-title">English : ${datas[`${dt}`].title.english} </h5>
-                <h5 class="card-title">Japanese : ${datas[`${dt}`].title.japanese}</h5>
-                <p class="card-text">Author :${datas[`${dt}`].author}</p>
-                <p class="card-text">Genre : ${datas[`${dt}`].genre.list}</p>
-                <p class="card-text">Season : ${datas[`${dt}`].season}</p>
-                <p class="card-text">Author :${datas[`${dt}`].description}</p>
-                </div>
+                
+            <div class="col-6 col-auto mt-8 w-70"> 
+                <div class="round">
+                    <div class="card" align ="center" style="width: 100%; height: 100%">
+                    
+                        <h3 class="card-title">EN : <i><u> ${datas[`${dt}`].title.english} </u></i> </h3>
+                        <h3 class="card-title">JP : <i><u> ${datas[`${dt}`].title.japanese} </u></i> </h3>
+                        <hr>
+                        
+                        <img class="rounded mx-auto d block" src="${datas[`${dt}`].imgpath}" alt="Card image cap">
+                        
+                        <hr>
+                        <div class="card-body">
+                          
+                            <class="card-text"><h4>Author</h4> <i><u><b> ${datas[`${dt}`].author} </b></u></i>
+                                <br>
+                                <br>
+                            <class="card-text"><h4>Genre</h4> <i><u><b> ${datas[`${dt}`].genre} </b></u></i>
+
+                                <br>
+                                <br> 
+
+                            <class="card-text"><h4>Seasons</h4> <i><u><b> ${datas[`${dt}`].season} </b></u></i>
+
+                                <br>
+                                <br>
+                                <hr>
+
+                            <p class="card-text"><h4>Description</h4> ${datas[`${dt}`].description}</p>
+                        </div>
+                    </div>  
                 </div>
             </div>
         `;
