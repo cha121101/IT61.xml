@@ -1,191 +1,141 @@
 <?php
-
 header('Access-Control-Allow-Origin: *');
-$table =
-    [
-        "bikes" => [
-            [
-                "type" => "Mountain bike",
-                "brand" => "Shimano",
-
-                "entry" => [
-                    "model_1" => "Tourney",
-                ],
-                "eunthusiast" => [
-
-                    "model_1" => "Altus M2000",
-                    "model_2" => "Acera M3000",
-                    "model_3" => "Alivio M3100",
-                    "model_4" => "Deore M6100,M5100,M4100"
-                ],
-                "professional" => [
-                    "model_1" => "SLX M7100",
-                    "model_2" => "Deore XT M8050",
-                    "model_3" => "Deore XT DI2 M8100",
-                    "model_4" => "XTR M9050",
-                    "model_5" => "XTR DI2 M9100"
-                ],
-
-                "imgpath" => [
-
-                    "entry" => [
-                        "imgpath_1" => "Tourney_GSET.jpg",
-                    ],
-
-                    "eunthusiast" => [
-
-                        "imgpath_1" => "Altus_GSET.jpg",
-                        "imgpath_2" => "Acera_GSET.jpg",
-                        "imgpath_3" => "Alivio_GSET.jpeg",
-                        "imgpath_4" => "DeoreXT_GSET.jpg"
-                    ],
-                    "professional" => [
-                        "imgpath_1" => "SLX_GSET.jpg",
-                        "imgpath_2" => "DeoreXT_GSET.jpg",
-                        "imgpath_3" => "DeoreXTDI2_GSET.jpg",
-                        "imgpath_4" => "XTR_GSET.jpg",
-                        "imgpath_5" => "XTRDI2.jpg"
-                    ],
-
-                ],
+// $xml = simplexml_load_file("anime.xml");
 
 
-
+$datas = [
+    "shonen" => [
+        "title" => [
+            "english" => "Attack on titan",
+            "japanese" => "Shingeki no Kyojin"
+        ],
+        "season" => 4,
+        "description" => "After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction. Humans are nearly exterminated by giant creatures called Titans.",
+        "author" => "Hajime Isayama",
+        "genre" => [
+            "Action", "Dark Fantacy", "Post-apocalyptic"
+        ],
+        "date_publish" => [
+            "season_1" => "April 2013",
+            "season_2" => "April 2017",
+            "season_3" => [
+                "part_1" => "July 2018",
+                "part_2" => "April 2019"
             ],
-            [
-                "type" => "Road Bike",
-                "brand" => "Shimano",
-
-                "entry" => [
-                    "model_1" => "Claris R2000",
-                    "model_2" => "Sora R3000",
-                    "model_3" => "Tiagra 4700"
-                ],
-                "eunthusiast" => [
-                    "model_1" => "105 R7000",
-                    "model_2" => "105 DI2 R7150",
-                    "model_3" => "Ultegra R8000",
-                    "model_4" => "Ultegra DI2 R8100"
-                ],
-                "professional" => [
-                    "model_1" => "Dura-Ace R9100",
-                    "model_2" => "Dura-Ace DI2 R9200",
-
-                ],
-
-                "imgpath" => [
-
-                    "entry" => [
-                        "imgpath_1" => "Claris_GSET.jpg",
-                        "imgpath_2" => "Sora_GSET.jpg",
-                        "imgpath_3" => "Tiagra_GSET.jpg",
-                    ],
-
-                    "eunthusiast" => [
-
-                        "imgpath_1" => "105_GSET.jpg",
-                        "imgpath_2" => "105DI2_GSET.jpeg",
-                        "imgpath_3" => "Ultegra_GSET.jpg",
-                        "imgpath_4" => "UltegraDI2_GSET.jpg",
-                    ],
-                    "professional" => [
-                        "imgpath_1" => "Duraace_GSET.jpg",
-                        "imgpath_2" => "DuraaceDI2_GSET.jpeg",
-
-                    ],
-                ],
+            "season_4" => [
+                "part_1" => "December 2020",
+                "part_2" => "January 2022"
+            ]
+        ],
+        "episode" => [
+            "season_1" => 25,
+            "season_2" => 12,
+            "season_3" => [
+                "part_1" => 12,
+                "part_2" => 10
             ],
-            [
-                "type" => "Downhill Bike",
-                "brand" => "Shimano",
+            "season_4" => [
+                "part_1" => 16,
+                "part_2" => 12
+            ]
+        ],
+        "imgpath" => "img/aotposter.jpeg"
+    ],
+    "shojo" => [
+        "title" => [
+            "english" => "From Me to You",
+            "japanese" => "Kimi ni Todoke"
+        ],
+        "season" => 2,
+        "description" => "Known for her semblance to the Sadako character of The Ring series, Sawako Kuronuma is given the nickname Sadako and misunderstood to be frightening and malicious like her fictional counterpart, despite having a timid and sweet nature. Longing to make friends and live a normal life, Sawako is naturally drawn to the cheerful and friendly Shouta Kazehaya, the most popular boy in her class. From their first meeting, Sawako has admired Kazehaya's ability to be the center of attention and aspires to be like him.",
+        "author" => "Karuho Shiina",
+        "genre" => [
+            "Coming of age", "Romantic comedy", "Slice of life"
+        ],
+        "date_publish" => [
+            "season_1" => "June 2009",
+            "season_2" => "Febuary 2011",
+        ],
+        "episode" => [
+            "season_1" => 25,
+            "season_2" => 13,
 
-                "entry" => [
-                    "model_1" => "",
+        ],
+        "imgpath" => "img/from_me_to_youposter.jpg"
+    ],
+    "seinen" => [
+        "title" => [
+            "english" => "Bungo Stray Dogs",
+            "japanese" => "Bungō Sutorei Doggusu"
+        ],
+        "season" => 4,
+        "description" => "The show mainly focuses on the weretiger Atsushi Nakajima, who joins others gifted with supernatural powers to accomplish different tasks including running a business, solving mysteries, and carrying out missions assigned by the agency.",
+        "author" => "Kafka Asagiri",
+        "genre" => [
+            "Action", "Mystery", "Supernatural"
+        ],
+        "date_publish" => [
+            "season_1" => "March 2016",
+            "season_2" => "October 2016",
+            "season_3" => "April 2019",
+            "season_4" => "January 2023",
+        ],
+        "episode" => [
+            "season_1" => 12,
+            "season_2" => 12,
+            "season_3" => 12,
+            "season_4" => 12,
 
-                ],
-                "eunthusiast" => [
-                    "model_1" => "Zee M640",
+        ],
+        "imgpath" => "img/Bungo Stray Dogsposter.jpg"
+    ],
+    "josei" => [
+        "title" => [
+            "english" => "Honey and Clover ",
+            "japanese" => "Hachimitsu to Clover"
+        ],
+        "season" => 1,
+        "description" => " Yuuta Takemoto, a sophomore at an arts college, shares a cheap apartment with two seniors—the eccentric Shinobu Morita, who keeps failing to graduate due to his absenteeism, and the sensible Takumi Mayama, who acts as a proper senior to Takemoto, often looking out for him.",
+        "author" => "Chisa umino",
+        "genre" => [
+            "Comedy", "Drama", "Romance"
+        ],
+        "date_publish" => [
+            "season_1" => "April 2005",
 
-                ],
-                "professional" => [
-                    "model_1" => "Saint N820"
-                ],
+        ],
+        "episode" => [
+            "season_1" => 24,
 
-                "imgpath" => [
+        ],
+        "imgpath" => "img/Honey and Cloverposter.jpg"
+    ],
+    "kodomomuke" => [
+        "title" => [
+            "english" => "Doraemon",
+            "japanese" => "Doraemon"
+        ],
+        "season" => 1,
+        "description" => " The story revolves around an earless robotic cat named Doraemon, who travels back in time from the 22nd century to aid a boy named Nobita Nobi. ",
+        "author" => "Fujiko F. Fujio",
+        "genre" => [
+            "Comedy", "Drama", "Romance"
+        ],
+        "date_publish" => [
+            "season_1" => "April 1979",
 
-                    "entry" => [
-                        "imgpath_1" => "Zee_GSET.jpeg",
-                    ],
+        ],
+        "episode" => [
+            "season_1" => 1787,
 
-                    "eunthusiast" => [
-                        "imgpath_1" => "Zee_GSET.jpeg",
-                    ],
-                    "professional" => [
-                        "imgpath_1" => "Saint_GSET.jpg",
-                    ],
-                ]
-            ],
-            [
-                "type" => "Gravel Bike",
-                "brand" => "Shimano",
+        ],
+        "imgpath" => "img/doraemonposter.jpg"
+    ],
 
-                "entry" => [
-                    "model_1" => "GRX 400",
 
-                ],
-                "eunthusiast" => [
-                    "model_1" => "GRX RX600",
-                    "model_2" => "GRX RX810",
+];
 
-                ],
-                "professional" => [
-                    "model_1" => "GRX RX815",
-                ],
 
-                "imgpath" => [
-
-                    "entry" => [
-                        "imgpath_1" => "GRX400_GSET.jpg",
-                    ],
-
-                    "eunthusiast" => [
-
-                        "imgpath_1" => "GRXRX600_GSET.jpg",
-                        "imgpath_2" => "GRXRX810_GSET.jpg",
-                    ],
-                    "professional" => [
-                        "imgpath_1" => "GRXRX815_GSET.jpg",
-
-                    ],
-                ]
-            ],
-            [
-                "type" => "TimeTrial Bike",
-                "brand" => "Shimano",
-
-                "entry" => [
-                    "model_1" => "105 DI2 R7150",
-                ],
-                "eunthusiast" => [
-                    "model_1" => "Ultegra DI2 R8100",
-
-                ],
-                "professional" => [
-                    "model_1" => "Dura-Ace DI2 R9200",
-                ],
-                "entry" => [
-                    "imgpath_1" => "105DI2_GSET.jpeg",
-                ],
-
-                "eunthusiast" => [
-                    "imgpath_1" => "UltegraDI2_GSET.jpg",
-                ],
-                "professional" => [
-                    "imgpath_1" => "DuraaceDI2.jpg",
-
-                ],
-            ],
-        ]
-    ];
-$JSONtext = json_encode($table);
-echo $JSONtext;
+// print_r($xml) ;
+$toJSON = json_encode($datas);
+echo $toJSON;
