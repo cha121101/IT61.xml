@@ -7,7 +7,7 @@ fetch('http://localhost/Charles_SourceFile/main.php').then(res => {
     //because of .then function we can get all the retured data and store it into JSONdata variable
 }).then(JSONdata => {
 
-    //since that 
+    //since that JSONdata is text so 
     var datas = JSON.parse(JSONdata);
 
     //because I can't access the array of the JSON file, so I decide to get all the keys in datas
@@ -19,7 +19,7 @@ fetch('http://localhost/Charles_SourceFile/main.php').then(res => {
     //since that getkeys is array type, so i decide to loop it and extract/get all the element in arrays.
     for (var dt of getkeys) {
 
-        //
+        //this will be the output in html
         msg += `
                 
             <div class="col-6 col-auto mt-8 w-70"> 
@@ -56,19 +56,8 @@ fetch('http://localhost/Charles_SourceFile/main.php').then(res => {
             </div>
         `;
 
-        // <div>
-        // <img src="${datas[`${dt}`].imgpath}" alt="waley" srcset="">
-        //     <p>Titles</p>
-        //     <p>English : ${ datas[`${dt}`].title.english  } , Japanese : ${ datas[`${dt}`].title.japanese  } </p> 
-        //     <p>Author : ${ datas[`${dt}`].author  }</p>
-        //     <p>Genre : ${ datas[`${dt}`].genre.list } </p>
-        //     <p>Season : ${ datas[`${dt}`].season  } </p>
-        //     <p>Description</p>
-        //     <p>${ datas[`${dt}`].description  }</p>
-        //     <hr>
-        // </div>
-
     }
+    //this where all the msg will inject in html
     document.getElementById('vars').innerHTML = msg;
 
 })
